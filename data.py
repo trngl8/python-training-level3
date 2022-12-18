@@ -1,29 +1,24 @@
-headers = ['id', 'title', 'author', 'year']
+def print_header(head):
+    for item in head:
+        # TODO: remove last coma
+        print(item.upper(), end=',')
+    print()
 
-# list
-book = [1, 'learn python hard way', 'zed shaw', 2021, 'zed shaw']
-print(book)
 
-# tuple
-book = (1, 'learn python hard way', 'zed shaw', 2021, 'zed shaw')
-print(book)
+def print_data(data):
+    for item in data:
+        print(item, end=',')
 
-# set
-book = {1, 'learn python hard way', 'zed shaw', 2021, 'zed shaw'}
-print(book)
 
-# dict
-book = {
-    'id': 1,
-    'title': 'learn python hard way',
-    'author': 'zed shaw',
-    'year': 2021
-}
-print(book)
+# ---------------------------------------------------
 
+book = [1, 'learn python hard way', 'zed shaw', 2021]
+
+header = ['id', 'title', 'author', 'year', 'weight']
+
+print_header(header)
+print_data(book)
 
 # ID,TITLE,AUTHOR,YEAR
-# ,,,
-# ,,,
 # 1,learn python hard way,zed shaw,2021
 # 2,,,
