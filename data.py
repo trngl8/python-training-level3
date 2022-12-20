@@ -31,7 +31,7 @@ def parse_file(filename):
                 'year': s[3]
             }
         )
-
+    lines.close()
     return result
 
 
