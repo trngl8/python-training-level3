@@ -12,11 +12,9 @@ def print_list(data):
 
 def print_books(data):
     """ Print a structure of dictionaries in list """
-    # TODO implement print for the dictionary
     for item in data:
-        print(item['title'])
-        print(item['author'])
-        print(item['year'])
+        res = ",".join(item.values())
+        print(res, end=',')
 
 
 def parse_file(filename):
