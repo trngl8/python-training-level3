@@ -1,3 +1,4 @@
+import sys
 def print_header(head):
     for item in head:
         print(item.upper(), end=',')
@@ -37,7 +38,7 @@ def parse_file(filename):
 
 # ---------------------------------------------------
 
-file = 'data/books_cleaned.csv'
+file = 'data/' + sys.argv[1]
 
 header = ['id', 'title', 'author', 'year', 'weight']
 books = parse_file(file)
