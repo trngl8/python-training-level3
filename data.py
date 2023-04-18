@@ -1,4 +1,5 @@
 import sys
+import os
 def print_header(head):
     for item in head:
         print(item.upper(), end=',')
@@ -33,6 +34,12 @@ def parse_file(filename):
     lines.close()
     return result
 
+
+def check_file_exists(filename):
+    if os.path.isfile(filename):
+        return True
+    else:
+        return False
 
 # ---------------------------------------------------
 
