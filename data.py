@@ -1,4 +1,5 @@
 import sys
+import os
 def print_header(head):
     for item in head:
         print(item.upper(), end=',')
@@ -36,14 +37,15 @@ def parse_file(filename):
 
 # ---------------------------------------------------
 
+
 file = 'data/' + sys.argv[1]
 
-header = ['id', 'title', 'author', 'year', 'weight']
-books = parse_file(file)
+if os.path.isfile(file):
+    header = ['id', 'title', 'author', 'year', 'weight']
+    books = parse_file(file)
 
-print_header(header)
-print_books(books)
-
-# ID,TITLE,AUTHOR,YEAR
-# 1,learn python hard way,zed shaw,2021
-# 2,,,
+    print_header(header)
+    print_books(books)
+else:
+    print("File does not exists")
+    exit(0)
