@@ -35,22 +35,17 @@ def parse_file(filename):
     return result
 
 
-def check_file_exists(filename):
-    if os.path.isfile(filename):
-        return True
-    else:
-        return False
-
 # ---------------------------------------------------
+
 
 file = 'data/' + sys.argv[1]
 
-header = ['id', 'title', 'author', 'year', 'weight']
-books = parse_file(file)
+if os.path.isfile(file):
+    header = ['id', 'title', 'author', 'year', 'weight']
+    books = parse_file(file)
 
-print_header(header)
-print_books(books)
-
-# ID,TITLE,AUTHOR,YEAR
-# 1,learn python hard way,zed shaw,2021
-# 2,,,
+    print_header(header)
+    print_books(books)
+else:
+    print("File does not exists")
+    exit(0)
