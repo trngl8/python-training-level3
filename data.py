@@ -19,10 +19,13 @@ def print_books(data):
         print(res, end=',')
 
 
-def parse_file(filename):
+def parse_file(filename, start=1):
     result = []
-    lines = open(filename)
-    for item in lines:
+
+    with open(filename) as file_object:
+        lines = file_object.readlines()
+
+    for item in lines[start:]:
         s = item.split(',')
         result.append(
             {
@@ -31,7 +34,7 @@ def parse_file(filename):
                 'year': s[3]
             }
         )
-    lines.close()
+
     return result
 
 
