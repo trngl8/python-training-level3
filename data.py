@@ -19,7 +19,7 @@ def print_books(data):
         print(res, end=',')
 
 
-def parse_file(filename, start=1):
+def parse_file(filename, start=1) -> list:
     result = []
 
     with open(filename) as file_object:
