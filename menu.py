@@ -11,6 +11,7 @@ result = menu_list[int(number)- 1]
 result = result.capitalize()
 print(result)
 
-# Expected:
-# Filesystem operations
-
+# Expected input:
+# 7
+# Expected output:
+# Web application
