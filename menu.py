@@ -1,9 +1,9 @@
 menu_list = [
     "data structures (list, dict, tuple, set)", "functions", "filesystem operations", "exceptions",
-    "objects details and abstractions", "database", "web application", 'sdfgsdfg'
+    "objects details and abstractions", "database", "web application"
 ]
 for i, item in enumerate(menu_list):
-    print(f"[{i+1}]. {item}")
+    print(f"[{i + 1}]. {item}")
 
 # TODO: maybe more clean?
 choice = 0
@@ -17,6 +17,6 @@ if len(menu_list) < choice:
     print(f"Number should be from 1 to {len(menu_list)}")
     exit()
 
-result = menu_list[choice- 1]
+result = menu_list[choice - 1]
 result = result.capitalize()
 print(result)
